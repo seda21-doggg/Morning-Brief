@@ -4,7 +4,16 @@ on:
   schedule:
     - cron: '0 5 * * 1-5'   # 7am Prague when CEST (UTC+2, summer)
     - cron: '0 6 * * 1-5'   # 7am Prague when CET  (UTC+1, winter)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      batch_delay_seconds:
+        description: 'Seconds to wait between research batches (0 = all concurrent, default). Use this to test working around a per-minute rate limit — does nothing for a zero/exhausted quota.'
+        required: false
+        default: '0'
+      max_concurrency:
+        description: 'Max concurrent batch requests when batch_delay_seconds is 0'
+        required: false
+        default: '5'
 
 permissions:
   contents: write
@@ -33,6 +42,8 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_FROM: ${{ secrets.RESEND_FROM }}
           FORCE_RUN: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+          BATCH_DELAY_SECONDS: ${{ github.event.inputs.batch_delay_seconds || '0' }}
+          MAX_CONCURRENCY: ${{ github.event.inputs.max_concurrency || '5' }}
         run: python scripts/generate_brief.py
 
       - name: Commit updated data

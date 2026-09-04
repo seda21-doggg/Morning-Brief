@@ -27,8 +27,12 @@ ROOT = Path(__file__).resolve().parent.parent
 TICKERS_FILE = ROOT / "tickers.json"
 HISTORY_DIR = ROOT / "history"
 
-BATCH_SIZE = 5
-MAX_CONCURRENCY = 5
+BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "5"))
+MAX_CONCURRENCY = int(os.environ.get("MAX_CONCURRENCY", "5"))
+# If set > 0, batches are dispatched one at a time with this many seconds
+# between each, instead of concurrently — useful for working around a
+# requests-per-minute rate limit (does nothing for a zero/exhausted quota).
+BATCH_DELAY_SECONDS = float(os.environ.get("BATCH_DELAY_SECONDS", "0"))
 
 
 def gate_on_prague_hour():
@@ -104,7 +108,17 @@ async def run():
             )
 
     print(f"Researching {len(tickers)} tickers in {len(batches)} batches...")
-    batch_results = await asyncio.gather(*(bounded(b) for b in batches))
+    if BATCH_DELAY_SECONDS > 0:
+        print(f"Sequential mode: {BATCH_DELAY_SECONDS:.0f}s between batches "
+              f"(~{len(batches) * BATCH_DELAY_SECONDS / 60:.0f} min total pacing).")
+        batch_results = []
+        for i, batch in enumerate(batches):
+            if i > 0:
+                await asyncio.sleep(BATCH_DELAY_SECONDS)
+            print(f"  Batch {i + 1}/{len(batches)}: {[t['tk'] for t in batch]}")
+            batch_results.append(await bounded(batch))
+    else:
+        batch_results = await asyncio.gather(*(bounded(b) for b in batches))
     all_items = [item for batch in batch_results for item in batch]
 
     print("Reconciling...")
