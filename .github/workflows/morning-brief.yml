@@ -1,0 +1,50 @@
+name: Morning Brief
+
+on:
+  schedule:
+    - cron: '0 5 * * 1-5'   # 7am Prague when CEST (UTC+2, summer)
+    - cron: '0 6 * * 1-5'   # 7am Prague when CET  (UTC+1, winter)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install -r requirements.txt
+
+      - name: Generate brief
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM: ${{ secrets.RESEND_FROM }}
+          FORCE_RUN: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+        run: python scripts/generate_brief.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "morning-brief-bot"
+          git config user.email "actions@github.com"
+          git add tickers.json history/ site/index.html
+          git diff --cached --quiet || git commit -m "Morning brief $(date -u +%F)"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - uses: actions/deploy-pages@v4

@@ -1,0 +1,42 @@
+<section class="brief">
+  <h2>{{ date }}</h2>
+
+  {% if high %}
+  <h3 class="flag-high">High impact</h3>
+  <ul>
+    {% for i in high %}
+    <li>
+      <strong>{{ i.tk }}</strong> ({{ i.co }}) — {{ i.headline }}
+      {% if i.move_pct %}<span class="move">{{ "%.1f"|format(i.move_pct) }}%</span>{% endif %}
+      {% if i.impact %}<p>{{ i.impact }}</p>{% endif %}
+      {% if i.url %}<a href="{{ i.url }}">source</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if medium %}
+  <h3 class="flag-medium">Medium impact</h3>
+  <ul>
+    {% for i in medium %}
+    <li>
+      <strong>{{ i.tk }}</strong> ({{ i.co }}) — {{ i.headline }}
+      {% if i.move_pct %}<span class="move">{{ "%.1f"|format(i.move_pct) }}%</span>{% endif %}
+      {% if i.impact %}<p>{{ i.impact }}</p>{% endif %}
+      {% if i.url %}<a href="{{ i.url }}">source</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if not high and not medium %}
+  <p>No HIGH or MEDIUM items today.</p>
+  {% endif %}
+
+  {% if quiet %}
+  <details>
+    <summary>Quiet ({{ quiet|length }} tickers, no material news)</summary>
+    <p>{{ quiet|map(attribute="tk")|join(", ") }}</p>
+  </details>
+  {% endif %}
+</section>

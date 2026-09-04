@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — {{ date }}</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; background: #fafafa; }
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.1rem; color: #666; font-weight: normal; }
+  h3.flag-high { color: #c0392b; }
+  h3.flag-medium { color: #b8860b; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 1rem; }
+  .move { font-weight: bold; margin-left: 0.4rem; }
+  a { color: #2563eb; }
+  nav { display: flex; gap: 12px; margin-bottom: 24px; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+  nav button { background: none; border: none; font: inherit; cursor: pointer; padding: 4px 8px; }
+  nav button.active { border-bottom: 2px solid #2563eb; font-weight: bold; }
+  .tab { display: none; }
+  .tab.active { display: block; }
+  #watchlist-tab ul { list-style: none; padding: 0; }
+  #watchlist-tab li { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #eee; margin-bottom: 0; }
+  #watchlist-tab button.remove { color: #c0392b; background: none; border: 1px solid #c0392b; border-radius: 4px; cursor: pointer; padding: 2px 8px; }
+  #add-form { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+  #add-form input { flex: 1; min-width: 120px; padding: 6px; }
+  #token-status { font-size: 0.85rem; color: #666; margin-top: 12px; }
+</style>
+</head>
+<body>
+<h1>Morning Brief</h1>
+
+<nav>
+  <button class="tab-btn active" data-tab="brief-tab">Brief</button>
+  <button class="tab-btn" data-tab="watchlist-tab">Watchlist</button>
+</nav>
+
+<div id="brief-tab" class="tab active">
+  {% include "_brief_partial.html" %}
+</div>
+
+<div id="watchlist-tab" class="tab">
+  <h2>Tracked tickers</h2>
+  <p>Remove a ticker, or add a new one below. Changes commit directly to <code>tickers.json</code>
+  in the repo and apply from the next scheduled run.</p>
+  <ul id="ticker-list">
+    {% for t in tickers %}
+    <li data-tk="{{ t.tk }}">
+      <span><strong>{{ t.tk }}</strong> — {{ t.co }} ({{ t.ex }})</span>
+      <button class="remove" data-tk="{{ t.tk }}">Remove</button>
+    </li>
+    {% endfor %}
+  </ul>
+  <form id="add-form">
+    <input id="add-tk" placeholder="Ticker (e.g. AAPL)" required>
+    <input id="add-co" placeholder="Company name" required>
+    <input id="add-ex" placeholder="Exchange (e.g. NASDAQ)" required>
+    <button type="submit">Add</button>
+  </form>
+  <div id="token-status"></div>
+</div>
+
+<script>
+const GH_OWNER = {{ gh_owner|tojson }};
+const GH_REPO = {{ gh_repo|tojson }};
+const FILE_PATH = "tickers.json";
+const TOKEN_KEY = "morning_brief_gh_pat";
+let currentTickers = {{ tickers|tojson }};
+
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab").forEach(s => s.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.tab).classList.add("active");
+  });
+});
+
+function getToken() {
+  let token = localStorage.getItem(TOKEN_KEY);
+  if (!token) {
+    token = prompt(
+      "Enter a GitHub fine-grained Personal Access Token, scoped only to the " +
+      GH_OWNER + "/" + GH_REPO + " repo, with Contents: read/write permission.\n" +
+      "It is stored in this browser only (localStorage) and sent only to api.github.com."
+    );
+    if (token) localStorage.setItem(TOKEN_KEY, token);
+  }
+  return token;
+}
+
+async function githubApi(path, options = {}) {
+  const token = getToken();
+  if (!token) throw new Error("No token provided");
+  const resp = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/${path}`, {
+    ...options,
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Accept": "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      ...(options.headers || {}),
+    },
+  });
+  if (!resp.ok) {
+    const body = await resp.text();
+    throw new Error(`GitHub API ${resp.status}: ${body}`);
+  }
+  return resp.json();
+}
+
+function b64EncodeUnicode(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+
+async function saveTickers(newList, message) {
+  const status = document.getElementById("token-status");
+  status.textContent = "Saving...";
+  try {
+    const current = await githubApi(`contents/${FILE_PATH}`);
+    const content = b64EncodeUnicode(JSON.stringify(newList, null, 2) + "\n");
+    await githubApi(`contents/${FILE_PATH}`, {
+      method: "PUT",
+      body: JSON.stringify({ message, content, sha: current.sha }),
+    });
+    currentTickers = newList;
+    status.textContent = "Saved. Takes effect on the next scheduled run.";
+  } catch (e) {
+    status.textContent = "Error: " + e.message;
+    console.error(e);
+  }
+}
+
+function attachRemoveHandler(btn) {
+  btn.addEventListener("click", async () => {
+    const tk = btn.dataset.tk;
+    const newList = currentTickers.filter(t => t.tk !== tk);
+    await saveTickers(newList, `Remove ${tk} from watchlist`);
+    btn.closest("li").remove();
+  });
+}
+document.querySelectorAll("button.remove").forEach(attachRemoveHandler);
+
+document.getElementById("add-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const tk = document.getElementById("add-tk").value.trim().toUpperCase();
+  const co = document.getElementById("add-co").value.trim();
+  const ex = document.getElementById("add-ex").value.trim();
+  if (!tk || !co || !ex) return;
+  const newList = currentTickers.concat([{ tk, co, ex }]);
+  await saveTickers(newList, `Add ${tk} to watchlist`);
+  const li = document.createElement("li");
+  li.dataset.tk = tk;
+  li.innerHTML = `<span><strong>${tk}</strong> — ${co} (${ex})</span> <button class="remove" data-tk="${tk}">Remove</button>`;
+  document.getElementById("ticker-list").appendChild(li);
+  attachRemoveHandler(li.querySelector("button.remove"));
+  e.target.reset();
+});
+</script>
+</body>
+</html>

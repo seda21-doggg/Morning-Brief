@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Morning Brief — {{ date }}</title>
+</head>
+<body style="font-family: -apple-system, system-ui, sans-serif; max-width: 640px; margin: 0 auto; color: #1a1a1a;">
+<h1 style="font-size: 1.3rem;">Morning Brief</h1>
+{% include "_brief_partial.html" %}
+<p style="color:#999; font-size: 0.8rem;">
+  Full brief and watchlist editor:
+  <a href="https://{{ gh_owner }}.github.io/{{ gh_repo }}/">{{ gh_owner }}.github.io/{{ gh_repo }}</a>
+</p>
+</body>
+</html>
