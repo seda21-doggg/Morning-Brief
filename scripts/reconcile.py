@@ -12,7 +12,10 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 
 from gemini_research import BriefItem, MOVE_THRESHOLD_PCT, _ITEM_SCHEMA
 
-RECONCILE_MODEL = "gemini-2.5-pro"
+# gemini-2.5-pro returned 404 "no longer available to new users" on this
+# account as of 2026-09 — Google's own error pointed at this replacement.
+# It's a preview model, so re-check availability if it ever 404s again.
+RECONCILE_MODEL = "gemini-3.1-pro-preview"
 
 
 class DailyBrief(BaseModel):
