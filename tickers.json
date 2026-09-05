@@ -21,5 +21,9 @@
   {"tk": "EVC", "co": "Entravision Communications", "ex": "NYSE"},
   {"tk": "UBER", "co": "Uber Technologies", "ex": "NYSE"},
   {"tk": "BA", "co": "Boeing", "ex": "NYSE"},
-  {"tk": "EVO.ST", "co": "Evolution AB", "ex": "Nasdaq Stockholm"}
+  {"tk": "EVO.ST", "co": "Evolution AB", "ex": "Nasdaq Stockholm"},
+  {"tk": "RHM.DE", "co": "Rheinmetall AG", "ex": "XETRA"},
+  {"tk": "BT-A.L", "co": "BT Group", "ex": "LSE"},
+  {"tk": "AG1.DE", "co": "Auto1 Group SE", "ex": "XETRA"},
+  {"tk": "CYM.AX", "co": "Cyprium Metals", "ex": "ASX"}
 ]

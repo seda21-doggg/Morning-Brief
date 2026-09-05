@@ -48,10 +48,16 @@ def _build_prompt(date_iso, all_items, yesterday_items):
         "(e.g. regulatory action, M&A, a major guidance change), even though a mechanical date "
         "filter would have excluded it.",
         "- Drop a modest price reaction driven by news that is itself old.",
-        f"- Final flags must be HIGH, MEDIUM, or QUIET, consistent with a {MOVE_THRESHOLD_PCT}% "
-        "move threshold.",
+        f"- Final flags: HIGH/MEDIUM requires either a price reaction of at least "
+        f"{MOVE_THRESHOLD_PCT}%, or news that is itself clearly material (confirmed contract/deal, "
+        "regulatory action, notable analyst rating/price-target change, verified real-world "
+        "product use, a large disclosed financial figure) regardless of price move.",
         "- If two batches returned conflicting information for the same ticker, prefer the more "
         "specific, more recently dated, better-sourced item.",
+        "- Preserve the substantive detail in `impact` for every HIGH/MEDIUM item — concrete "
+        "figures, confirmed facts, analyst/firm names, deal values. Do not compress a detailed "
+        "batch result down into a vague one-liner; if anything, add specifics you can infer from "
+        "the raw results below rather than trim them.",
         "",
         "Yesterday's published items (for dedup):",
         json.dumps([i.model_dump() for i in yesterday_items], indent=2),

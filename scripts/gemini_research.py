@@ -65,8 +65,22 @@ def _build_prompt(batch, window_start_iso, window_end_iso, today_iso, exclude_by
         "material (e.g. a regulatory decision, M&A, a major guidance change) rather than routine "
         "commentary — otherwise, stick to the window.",
         "",
-        f"Move threshold: only flag HIGH or MEDIUM if the price reaction is at least "
-        f"{MOVE_THRESHOLD_PCT}%. Smaller moves without a clearly material driver are QUIET.",
+        "Flagging — HIGH or MEDIUM requires either:",
+        f"  (a) a price reaction of at least {MOVE_THRESHOLD_PCT}%, OR",
+        "  (b) news that is itself clearly material regardless of price reaction — a confirmed "
+        "contract or deal, a regulatory action, a significant analyst rating or price-target "
+        "change, a notable product launch, verified real-world use of the company's product/"
+        "technology, or a large disclosed financial figure.",
+        f"A price move under {MOVE_THRESHOLD_PCT}% with no such material driver behind it is QUIET.",
+        "",
+        "Detail bar for `impact` on every HIGH/MEDIUM item — this is the actual point of the "
+        "brief, do not write a vague one-liner:",
+        "- Name the concrete specifics: deal/contract names and values, confirmed facts (e.g. "
+        "what was confirmed, by whom, where), analyst firm names and their new rating/price "
+        "target if changed, disclosed dollar/pound/euro figures, product/version names.",
+        "- 2-4 sentences of real substance, not a generic summary a headline alone would already "
+        "tell you.",
+        "- QUIET items can leave `impact` empty.",
         "",
         "Hard rules:",
         "- Never fabricate a story, date, or URL — only report items with a real, dated source "
