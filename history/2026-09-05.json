@@ -1,0 +1,279 @@
+{
+  "date": "2026-09-05",
+  "prior_trading_day_window": {
+    "start": "2026-09-04T00:00:00+00:00",
+    "end": "2026-09-05T06:00:00+00:00"
+  },
+  "items": [
+    {
+      "tk": "APR.WA",
+      "co": "Auto Partner SA",
+      "flag": "QUIET",
+      "headline": "Auto Partner SA Stock Closes Slightly Lower at 30.30 PLN on September 4",
+      "impact": "",
+      "move_pct": -0.16,
+      "url": "https://ir.autopartner.com/",
+      "published_at": "2026-09-04T15:00:00+00:00"
+    },
+    {
+      "tk": "PCO.WA",
+      "co": "Pepco Group NV",
+      "flag": "QUIET",
+      "headline": "Pepco Group NV Shares Edge Down 0.10% in Quiet Friday Trading Session",
+      "impact": "",
+      "move_pct": -0.1,
+      "url": "https://www.pepcogroup.eu/",
+      "published_at": "2026-09-04T15:00:00+00:00"
+    },
+    {
+      "tk": "LPP.WA",
+      "co": "LPP SA",
+      "flag": "QUIET",
+      "headline": "LPP SA Shares Rise 2.50% on September 4, Closing at 21,340 PLN",
+      "impact": "",
+      "move_pct": 2.5,
+      "url": "https://www.lpp.com/",
+      "published_at": "2026-09-04T15:00:00+00:00"
+    },
+    {
+      "tk": "GRPN",
+      "co": "Groupon, Inc.",
+      "flag": "QUIET",
+      "headline": "Groupon Shares Stabilize with a Minimal 0.05% Gain on September 4",
+      "impact": "",
+      "move_pct": 0.05,
+      "url": "https://investor.groupon.com/",
+      "published_at": "2026-09-04T20:00:00+00:00"
+    },
+    {
+      "tk": "NU",
+      "co": "Nu Holdings Ltd.",
+      "flag": "QUIET",
+      "headline": "Nu Holdings (Nubank) Closes Down 1.98% on September 4 Amid Broad Sector Consolidation",
+      "impact": "",
+      "move_pct": -1.98,
+      "url": "https://investors.nu/",
+      "published_at": "2026-09-04T20:00:00+00:00"
+    },
+    {
+      "tk": "EWG.L",
+      "co": "W.A.G Payment Solutions plc (Eurowag)",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "VTY.L",
+      "co": "Vistry Group plc",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "PAGS",
+      "co": "PagSeguro Digital Ltd.",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "SEE.L",
+      "co": "Seeing Machines Limited",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "NVO",
+      "co": "Novo Nordisk A/S",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "ARA.MX",
+      "co": "Consorcio ARA",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "KSPI",
+      "co": "Kaspi.kz",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "VME.DE",
+      "co": "Viromed Medical AG",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "KEOC.ST",
+      "co": "Keo Capital AB",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "GRBK",
+      "co": "Green Brick Partners, Inc.",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "XPF.L",
+      "co": "XP Factory",
+      "flag": "QUIET",
+      "headline": "XP Factory Trading Activity Remains Quiet Ahead of September Earnings Release",
+      "impact": "",
+      "move_pct": -2.56,
+      "url": "https://stockinvest.us",
+      "published_at": "2026-09-03T12:00:00Z"
+    },
+    {
+      "tk": "GOOG",
+      "co": "Alphabet Inc.",
+      "flag": "MEDIUM",
+      "headline": "Federal Judge Dodges Ad-Tech Breakup and Rejects DOJ's AdX Divestiture Request",
+      "impact": "In a major antitrust remedies decision, U.S. District Judge Leonie Brinkema rejected the Department of Justice's request to break up Google's advertising business or force a divestiture of its AdX ad exchange. The court opted instead for behavioral remedies, such as banning first-look privileges, and ordered both parties to submit a jointly proposed final judgment within 30 days. Separately, Google partnered with MN8 Energy and Eos Energy Enterprises on a $350 million clean energy project in West Virginia to support its regional data centers, and the company went ex-dividend for its $0.22 per share quarterly dividend on September 4, 2026.",
+      "move_pct": -1.05,
+      "url": "https://www.courthousenews.com",
+      "published_at": "2026-09-04T18:13:00Z"
+    },
+    {
+      "tk": "NVDA",
+      "co": "NVIDIA Corporation",
+      "flag": "MEDIUM",
+      "headline": "NVIDIA to Acquire Open-Source AI Developer Hub Hugging Face for $12.93 Billion",
+      "impact": "NVIDIA entered a definitive agreement to acquire open-source AI platform Hugging Face, Inc. for $12.93 billion, which includes an $11.9 billion cash purchase price for stockholders and up to $1.0 billion in equity-based employee retention. NVIDIA CEO Jensen Huang committed to maintaining Hugging Face as an open, multi-cloud, and hardware-neutral platform with no required NVIDIA compute lock-in. Following the announcement, William Blair analyst Sebastien Naji reiterated a Buy rating on NVIDIA, and the company separately disclosed its AI equity investment portfolio has scaled to $99 billion.",
+      "move_pct": 1.8,
+      "url": "https://www.tipranks.com",
+      "published_at": "2026-09-04T08:14:00Z"
+    },
+    {
+      "tk": "NOW",
+      "co": "ServiceNow",
+      "flag": "QUIET",
+      "headline": "ServiceNow Volatility Subsides as Software Stocks Move Under Broader Macro Tailwinds",
+      "impact": "",
+      "move_pct": -2.97,
+      "url": "https://www.investing.com",
+      "published_at": "2026-09-04T10:06:00Z"
+    },
+    {
+      "tk": "EVC",
+      "co": "Entravision Communications",
+      "flag": "QUIET",
+      "headline": "Entravision Communications Director Paul Zevnik Files Form 4 for Routine Share Sale",
+      "impact": "",
+      "move_pct": 0.12,
+      "url": "https://www.marketbeat.com",
+      "published_at": "2026-09-04T17:00:00Z"
+    },
+    {
+      "tk": "UBER",
+      "co": "Uber Technologies",
+      "flag": "MEDIUM",
+      "headline": "Uber Exits Key African Markets and Faces European Class-Action Lawsuit Over AI Pay",
+      "impact": "Uber has abruptly ended its operations in Nigeria and Uganda due to cost pressures and ongoing challenges in establishing a foothold in Africa. Concurrently, European Uber drivers have filed a class-action lawsuit challenging the company's reliance on artificial intelligence algorithms to dynamically set pay rates and alleging unfair labor practices. While these developments represent notable headwinds, markets reacted calmly with a minimal share price decline.",
+      "move_pct": -0.64,
+      "url": "",
+      "published_at": "2026-09-04T21:05:00Z"
+    },
+    {
+      "tk": "BA",
+      "co": "Boeing",
+      "flag": "MEDIUM",
+      "headline": "Boeing Secures $241M U.S. Navy Contract for F/A-18 and EA-18G Repairs",
+      "impact": "The U.S. Department of Defense awarded Boeing a $241.34 million ceiling-price delivery order (N00383-26-F-YY2B) under an existing basic ordering agreement. The contract requires Boeing to repair nine different configurations of flight control surfaces utilized on the U.S. Navy's F/A-18 E/F Super Hornet and EA-18G Growler aircraft. Work will primarily be conducted in Jacksonville, Florida (83%) and St. Louis, Missouri (17%), and is slated for completion by September 2032.",
+      "move_pct": 0.63,
+      "url": "",
+      "published_at": "2026-09-04T22:30:00Z"
+    },
+    {
+      "tk": "EVO.ST",
+      "co": "Evolution AB",
+      "flag": "QUIET",
+      "headline": "Evolution AB Trades in Tight Range on Low News Volume",
+      "impact": "",
+      "move_pct": 0.07,
+      "url": "",
+      "published_at": "2026-09-04T15:30:00Z"
+    },
+    {
+      "tk": "RHM.DE",
+      "co": "Rheinmetall AG",
+      "flag": "MEDIUM",
+      "headline": "Rheinmetall Canada Awarded U.S. Navy Contract for Air Start Unit Components",
+      "impact": "Rheinmetall Canada has secured a contract to supply replacement components for the U.S. Navy's MSU-200NAV mobile air start units, supporting aircraft ground operations ashore and aboard ships. Awarded by the U.S. Department of Defense to the Canadian Commercial Corporation, the agreement is valued in the single-digit millions of euros and will run from late 2026 through 2028. Rheinmetall Canada will provide spare parts for key system components including the turbine-based starter and the Full Authority Digital Engine Control (FADEC) system.",
+      "move_pct": -3.38,
+      "url": "",
+      "published_at": "2026-09-04T07:13:00Z"
+    },
+    {
+      "tk": "BT-A.L",
+      "co": "BT Group",
+      "flag": "QUIET",
+      "headline": "BT Group's Openreach Surpasses 23.5 Million Premises Milestone",
+      "impact": "",
+      "move_pct": -0.69,
+      "url": "",
+      "published_at": "2026-09-04T08:13:00Z"
+    },
+    {
+      "tk": "AG1.DE",
+      "co": "AUTO1 Group SE",
+      "flag": "QUIET",
+      "headline": "Goldman Sachs Raises AUTO1 Group Price Target to \u20ac37.00 on European Growth and Valuation Advantage",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.finanznachrichten.de",
+      "published_at": "2026-09-03T22:20:00+00:00"
+    },
+    {
+      "tk": "CYM.AX",
+      "co": "Cyprium Metals Limited",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    }
+  ]
+}
