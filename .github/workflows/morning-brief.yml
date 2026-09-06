@@ -39,8 +39,8 @@ jobs:
       - name: Generate brief
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          RESEND_FROM: ${{ secrets.RESEND_FROM }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           FORCE_RUN: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
           BATCH_DELAY_SECONDS: ${{ github.event.inputs.batch_delay_seconds || '0' }}
           MAX_CONCURRENCY: ${{ github.event.inputs.max_concurrency || '5' }}

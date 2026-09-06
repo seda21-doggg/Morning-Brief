@@ -25,11 +25,13 @@ GitHub Actions cron (weekdays, 7am Prague)
   -> generate_brief.py
        -> load tickers.json (watchlist) + most recent history/*.json (yesterday, for dedup)
        -> chunk tickers into batches of 5
-       -> N parallel Gemini calls (gemini-2.5-flash + google_search grounding + structured output)
-       -> 1 reconciliation Gemini call (gemini-2.5-pro) — dedup, apply 5% threshold, assign HIGH/MEDIUM/QUIET
+       -> N parallel Gemini calls (gemini-3.5-flash + google_search grounding + structured output,
+          via the Interactions API: client.aio.interactions.create)
+       -> 1 reconciliation Gemini call (gemini-3.1-pro-preview) — dedup, apply materiality/5%
+          flagging rule, assign HIGH/MEDIUM/QUIET, enforce concrete-detail bar on impact text
        -> write history/<date>.json
        -> render site/index.html from templates/brief_template.html
-       -> send email via Resend (to both addresses)
+       -> send email via Gmail SMTP (to both addresses)
   -> commit tickers.json / history/ / site/index.html back to main
   -> deploy site/ to GitHub Pages
 ```
@@ -55,7 +57,7 @@ Morning-Brief/
     gemini_research.py         # batch research calls
     reconcile.py                # reconciliation call
     render.py                  # renders site/index.html from history + tickers
-    email_send.py               # Resend send
+    email_send.py               # Gmail SMTP send
   .github/workflows/
     morning-brief.yml
   requirements.txt
@@ -91,7 +93,11 @@ Seed it with the current list:
   {"tk": "EVC", "co": "Entravision Communications", "ex": "NYSE"},
   {"tk": "UBER", "co": "Uber Technologies", "ex": "NYSE"},
   {"tk": "BA", "co": "Boeing", "ex": "NYSE"},
-  {"tk": "EVO.ST", "co": "Evolution AB", "ex": "Nasdaq Stockholm"}
+  {"tk": "EVO.ST", "co": "Evolution AB", "ex": "Nasdaq Stockholm"},
+  {"tk": "RHM.DE", "co": "Rheinmetall AG", "ex": "XETRA"},
+  {"tk": "BT-A.L", "co": "BT Group", "ex": "LSE"},
+  {"tk": "AG1.DE", "co": "Auto1 Group SE", "ex": "XETRA"},
+  {"tk": "CYM.AX", "co": "Cyprium Metals", "ex": "ASX"}
 ]
 ```
 
@@ -169,35 +175,65 @@ caps will be QUIET most days — that's expected, not a failure.
 
 ## `gemini_research.py` — per-batch research call
 
-- Model: `gemini-2.5-flash` (cheap; this runs once per batch, ~5 times per
-  morning — no reason to pay Pro pricing here).
-- Tool: Google Search grounding — `tools=[{"google_search": {}}]`. This
-  replaces WebSearch-then-summarize as a single call.
-- Structured output: pass a `response_schema` (JSON mode) matching the
-  `items` array shape above, so you get parsed JSON back directly instead of
-  parsing a fixed text format.
-- System instructions must state explicitly, verbatim, every run — this is
+- Model: `gemini-3.5-flash` (cheap; this runs once per batch, ~5-6 times per
+  morning — no reason to pay Pro pricing here). Note: `gemini-2.5-flash`
+  worked fine too when tried, but Gemini's model lineup and availability
+  shift fast — re-verify the model still exists if this ever 404s (Google's
+  error message names the current replacement directly, as it did for the
+  2.5-pro swap below).
+- API: the `google-genai` SDK's Interactions API —
+  `client.aio.interactions.create(model=..., input=..., tools=[...],
+  response_format={...})` — not the older `generate_content` call.
+- Tool: Google Search grounding — `tools=[{"type": "google_search"}]`.
+- Structured output: `response_format={"type": "text", "mime_type":
+  "application/json", "schema": {...}}` with a **hand-written flat JSON
+  schema** (no `$defs`/`$ref` — Pydantic's auto-generated nested schema is
+  the riskier choice here; write the schema as a plain dict instead).
+- System instructions (folded into the single `input` string — the
+  Interactions API's `create` call takes one `input` param, not separate
+  system/user roles) must state explicitly, verbatim, every run — this is
   the actual IP of the whole system, carry it over unchanged in spirit from
   the old task file:
   - Exact date window (today's date + the prior-trading-day window).
   - Per-ticker company/exchange context (from `tickers.json`).
   - The exclude list: headlines/URLs already reported for that ticker
     yesterday (from the loaded history file) — don't re-report them.
-  - **Move threshold: 5%** (updated from the original 10%) — price moves
-    under 5% don't qualify as HIGH/MEDIUM on their own.
+  - **Flagging: HIGH/MEDIUM requires EITHER a ≥5% price move OR news that
+    is itself clearly material regardless of price move** (confirmed
+    contract/deal, regulatory action, notable analyst rating/price-target
+    change, verified real-world product use, a large disclosed financial
+    figure). A sub-5% move with no such driver is QUIET. (Originally spec'd
+    as move-only; loosened after real output showed material stories like
+    a confirmed defense-equipment combat deployment or a disclosed
+    multi-billion windfall getting under-flagged because they weren't
+    framed as price-move stories.)
+  - **Detail bar**: `impact` on every HIGH/MEDIUM item must carry concrete
+    specifics — deal values, confirmed facts, analyst/firm names, rating/
+    price-target changes, disclosed figures — 2-4 sentences of real
+    substance, not a generic one-liner a headline would already tell you.
   - No fabrication — only items with a real, dated, in-window source.
   - QUIET is an expected, acceptable outcome for most tickers most days —
     do not manufacture content to avoid returning QUIET.
 
 ## `reconcile.py` — single reconciliation call
 
-- Model: `gemini-2.5-pro` — this runs once per morning regardless of ticker
-  count, so the better reasoning is cheap here even though Flash was right
-  for the batches. This is where the judgment calls happen: an item dated
-  just outside the window but clearly new and material should be kept (e.g.
-  a regulatory fine announced late the prior session); a fresh publish
-  timestamp wrapped around a stale analyst reiteration should be dropped;
-  a small reaction to old news should be dropped.
+- Model: `gemini-3.1-pro-preview`. `gemini-2.5-pro` returned a 404 ("no
+  longer available to new users") on first real use in Sept 2026 — Google's
+  own error message named this replacement. It's a preview model, so
+  re-check availability if it ever 404s again; the fix pattern is the same
+  (read what the error recommends, swap `RECONCILE_MODEL`).
+- Same Interactions API + hand-written flat schema approach as the research
+  calls above.
+- This runs once per morning regardless of ticker count, so the better
+  reasoning is cheap here even though Flash was right for the batches. This
+  is where the judgment calls happen: an item dated just outside the window
+  but clearly new and material should be kept (e.g. a regulatory fine
+  announced late the prior session); a fresh publish timestamp wrapped
+  around a stale analyst reiteration should be dropped; a small reaction to
+  old news should be dropped.
+- Must preserve (not compress) the research batches' concrete detail in
+  `impact` for HIGH/MEDIUM items — reconciliation's job is dedup/judgment,
+  not summarizing the substance back down to a vague line.
 - Input: the concatenated batch results + yesterday's `history` file.
 - Output: same `items` schema, finalized — this is what gets written to
   `history/<date>.json`.
@@ -229,10 +265,15 @@ artifact's approach) with two sections:
 
 ## `email_send.py`
 
-- Provider: **Resend** (`RESEND_API_KEY` secret). One-time manual setup
-  outside this repo: sign up, verify a sending domain or use the sandbox
-  sender for testing — Resend restricts unverified senders to limited
-  recipients, so verify before relying on the two real addresses below.
+- Provider: **Gmail SMTP** (`smtp.gmail.com:587`, STARTTLS), via
+  `GMAIL_ADDRESS` + `GMAIL_APP_PASSWORD` secrets. The app password is a
+  16-character credential from Google Account → Security → 2-Step
+  Verification → App passwords — a regular Gmail password will not
+  authenticate here, and 2-Step Verification must be on first.
+  (Originally spec'd as Resend, but Resend's sandbox sender 403s on any
+  recipient other than the account's own signup address unless a domain is
+  verified — switched to Gmail SMTP to avoid the domain-verification
+  requirement.)
 - Recipients: `seda.21@seznam.cz`, `martin.sedivy@jtfg.com`.
 - Send the same HIGH-first content as the page, as a plain HTML email (reuse
   the rendered brief section, not the watchlist editor part).
@@ -246,7 +287,16 @@ on:
   schedule:
     - cron: '0 5 * * 1-5'   # 7am Prague when CEST (UTC+2, summer)
     - cron: '0 6 * * 1-5'   # 7am Prague when CET  (UTC+1, winter)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      batch_delay_seconds:
+        description: 'Seconds between research batches (0 = concurrent). For testing rate limits.'
+        required: false
+        default: '0'
+      max_concurrency:
+        description: 'Max concurrent batch requests when batch_delay_seconds is 0'
+        required: false
+        default: '5'
 
 permissions:
   contents: write
@@ -269,8 +319,11 @@ jobs:
       - name: Generate brief
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           FORCE_RUN: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+          BATCH_DELAY_SECONDS: ${{ github.event.inputs.batch_delay_seconds || '0' }}
+          MAX_CONCURRENCY: ${{ github.event.inputs.max_concurrency || '5' }}
         run: python scripts/generate_brief.py
       - name: Commit updated data
         run: |
@@ -292,14 +345,15 @@ schedule updates twice a year.
 ## Secrets to set in the repo (Settings → Secrets and variables → Actions)
 
 - `GEMINI_API_KEY`
-- `RESEND_API_KEY`
+- `GMAIL_ADDRESS`
+- `GMAIL_APP_PASSWORD`
 
 The watchlist-editor PAT is **not** a repo secret — the user enters it once
 in their own browser, stored in `localStorage` only.
 
 ## Local dev
 
-- `.env.example` listing `GEMINI_API_KEY`, `RESEND_API_KEY`.
+- `.env.example` listing `GEMINI_API_KEY`, `GMAIL_ADDRESS`, `GMAIL_APP_PASSWORD`.
 - `python scripts/generate_brief.py` with `FORCE_RUN=1` in the environment
   to bypass the time gate for local testing.
 - Test with a 2-3 ticker subset of `tickers.json` first to avoid burning
@@ -308,9 +362,12 @@ in their own browser, stored in `localStorage` only.
 ## Known limitations (v1, intentional — not bugs to silently fix)
 
 - Prior-trading-day logic skips weekends only, not market holidays.
-- Reconciliation quality depends on `gemini-2.5-pro` judgment for the
+- Reconciliation quality depends on `gemini-3.1-pro-preview` judgment for the
   "outside window but material" / "stale reiteration" calls — spot-check the
-  first week of real runs against what you'd have flagged manually.
+  first week of real runs against what you'd have flagged manually. It's a
+  preview model; Google's Gemini lineup has moved fast (two model swaps
+  were needed in the first week of real runs alone) — if a run 404s, read
+  the error, it names the current replacement.
 - Repo is public by default (simplifies free GitHub Pages hosting); nothing
   secret lives in code, but the ticker watchlist and briefs are visible to
   anyone with the link. Switch to private only if you also have GitHub
