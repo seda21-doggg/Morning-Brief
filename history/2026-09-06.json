@@ -1,0 +1,279 @@
+{
+  "date": "2026-09-06",
+  "prior_trading_day_window": {
+    "start": "2026-09-05T00:00:00+00:00",
+    "end": "2026-09-06T06:00:00+00:00"
+  },
+  "items": [
+    {
+      "tk": "APR.WA",
+      "co": "Auto Partner SA",
+      "flag": "QUIET",
+      "headline": "Auto Partner SA Shares Move Quietly in Post-Friday Consolidation",
+      "impact": "",
+      "move_pct": -0.16,
+      "url": "https://ir.autopartner.com",
+      "published_at": "2026-09-04T15:00:00Z"
+    },
+    {
+      "tk": "PCO.WA",
+      "co": "Pepco Group NV",
+      "flag": "QUIET",
+      "headline": "Pepco Group NV Closes Flat on Friday with No Major Weekend Updates",
+      "impact": "",
+      "move_pct": -0.1,
+      "url": "https://www.pepcogroup.eu",
+      "published_at": "2026-09-04T15:00:00Z"
+    },
+    {
+      "tk": "LPP.WA",
+      "co": "LPP SA",
+      "flag": "MEDIUM",
+      "headline": "LPP SA's Sinsay Budget Brand to Launch E-Commerce Marketplace in Early 2026",
+      "impact": "LPP SA announced that its fast-fashion budget brand, Sinsay, will launch an online e-commerce marketplace in early 2026, opening its platform to external retail partners for the first time. The platform will operate on a selective, closed model to offer complementary items like cosmetics, toys, and children's goods, aiming to compete with international discount platforms like Temu and Shein. Sinsay plans to scale the marketplace rapidly, targeting more than 100,000 third-party products on the platform by 2027 to establish a new revenue stream across its 2,000 physical stores.",
+      "move_pct": 2.5,
+      "url": "https://www.liga.net",
+      "published_at": "2026-09-03T11:00:00Z"
+    },
+    {
+      "tk": "GRPN",
+      "co": "Groupon, Inc.",
+      "flag": "QUIET",
+      "headline": "Groupon Shares Stabilize in Quiet Trading with No Weekend Announcements",
+      "impact": "",
+      "move_pct": 0.05,
+      "url": "https://investor.groupon.com",
+      "published_at": "2026-09-04T20:00:00Z"
+    },
+    {
+      "tk": "NU",
+      "co": "Nu Holdings Ltd.",
+      "flag": "QUIET",
+      "headline": "Nu Holdings Consolidates in Quiet Session with No New Catalysts",
+      "impact": "",
+      "move_pct": -1.98,
+      "url": "https://investors.nu",
+      "published_at": "2026-09-04T20:00:00Z"
+    },
+    {
+      "tk": "EWG.L",
+      "co": "W.A.G Payment Solutions plc",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://investors.eurowag.com/",
+      "published_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "tk": "VTY.L",
+      "co": "Vistry Group PLC",
+      "flag": "MEDIUM",
+      "headline": "Vistry Partners with Abri to Deliver 314 Affordable Homes in South West England",
+      "impact": "Vistry Group plc agreed three partnership deals with housing provider Abri to deliver 314 affordable homes across Bristol, Weston-super-Mare, and Templecombe. The agreements include 130 homes at The Fosseway in south Bristol (an 8.3-acre brownfield site being redeveloped in a joint venture with Goram Homes), 114 homes at Locking Parklands, and 70 homes at Manor Farm in Somerset. A portion of the developments (214 units) will receive grant funding support from Homes England, while the remaining homes will be delivered through a joint venture arrangement.",
+      "move_pct": 1.34,
+      "url": "https://www.vistry.co.uk/",
+      "published_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "tk": "PAGS",
+      "co": "PagSeguro Digital Ltd.",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://investors.pagbank.com.br/",
+      "published_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "tk": "SEE.L",
+      "co": "Seeing Machines Limited",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.seeingmachines.com/",
+      "published_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "tk": "NVO",
+      "co": "Novo Nordisk A/S",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.novonordisk.com/",
+      "published_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "tk": "ARA.MX",
+      "co": "Consorcio ARA, S.A.B. de C.V.",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "KSPI",
+      "co": "Joint Stock Company Kaspi.kz",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "VME.DE",
+      "co": "Viromed Medical AG",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "KEOC.ST",
+      "co": "Keo Capital AB",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "GRBK",
+      "co": "Green Brick Partners, Inc.",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "XPF.L",
+      "co": "XP Factory plc",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "GOOG",
+      "co": "Alphabet Inc.",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "NVDA",
+      "co": "Nvidia Corporation",
+      "flag": "HIGH",
+      "headline": "U.S. Reportedly Used Nvidia AI Chip Access to Broker Armenia-Azerbaijan Peace Deal",
+      "impact": "According to a Wall Street Journal report, U.S. negotiators used the promise of expanded export licenses for Nvidia's advanced Blackwell and Rubin graphics processing units (GPUs) as a major diplomatic incentive to secure a preliminary peace agreement between Armenia and Azerbaijan. The approved chip allocations are bound for Firebird's AI data center in Hrazdan, Armenia, which is planned to scale into a 300-megawatt facility housing over 70,000 Nvidia GPUs at an ultimate cost of over $5 billion. This represents one of the first documented cases of advanced AI compute being actively leveraged as a key bargaining chip to help resolve an armed conflict.",
+      "move_pct": null,
+      "url": "https://thenextweb.com/news/the-us-paid-for-a-peace-deal-in-nvidia-chips",
+      "published_at": "2026-09-05T19:07:00Z"
+    },
+    {
+      "tk": "NOW",
+      "co": "ServiceNow, Inc.",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "EVC",
+      "co": "Entravision Communications Corporation",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "UBER",
+      "co": "Uber Technologies",
+      "flag": "MEDIUM",
+      "headline": "Uber Seattle Hub Faces Layoffs Amid Broader 10% Global Workforce Restructuring",
+      "impact": "On September 5, 2026, a WARN filing revealed that Uber is laying off 93 employees at its Seattle engineering hub, affecting software engineers, product managers, and data scientists. This localized cut is part of a newly announced global efficiency drive to eliminate approximately 3,300 corporate positions\u2014representing roughly 10% of Uber's 34,000-person global workforce. The restructuring, initiated by CEO Dara Khosrowshahi, aims to reduce management layers by 20%, dismantle micro-teams, and restrict remote work to just 1% of the workforce. The company expects to reallocate the resulting capital, which Guggenheim estimates could yield $1.2 billion in annualized savings, toward autonomous vehicle and robotaxi development.",
+      "move_pct": null,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcLI270ctfZBn6hF7sMo6xZ-6rqQySxbPnDErVlpFae2fGB-eVs9AUCCQ5pK6uBYy4rAfcu8WtgfT0BLiZp1XKX-oIarfwEZ7X3O3kmssBP5qKuASREk7b087k2YzKMptysSKhaExcJ9W4BB8FEL8JPaPNvCeNGPI1qTI89ygMHHTqtyWLCrOTeB19ziSmL0ViFFCWJYVx8IDHNbMF05WEQL9FHaymevMks3Lpyi-ZvtlRo8My8fOovnKuqzibmp4LQC-tkFXopHtyrCmUpZhMENDIOvg=",
+      "published_at": "2026-09-05T20:11:00Z"
+    },
+    {
+      "tk": "BA",
+      "co": "Boeing",
+      "flag": "QUIET",
+      "headline": "Boeing Trades Quietly Amid Broader Regulatory and Labor Scrutiny",
+      "impact": "On September 6, 2026, an Amazon Prime Air cargo Boeing 767-300 operated by 21 Air overran the runway during landing at Miami International Airport. While the safety incident closed airport runways, it did not drive immediate material stock volatility or operational changes for Boeing.",
+      "move_pct": null,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFm7pkkIhm57sFIFQ0ukm05_-xNflx4VLOn_IvfVDexJsgoJS47G-Gyln8YJBd9mBU_ZI1ciUv6Ymdj4XJEC9mEpDvwrq5W8gsDcCidPb0smfnrstiNXrZfvMkQFn3CWo8WoALnkG_DchizAVxZvg8AlMvTAUnhvEL7Dw==",
+      "published_at": "2026-09-06"
+    },
+    {
+      "tk": "EVO.ST",
+      "co": "Evolution AB",
+      "flag": "QUIET",
+      "headline": "Evolution AB Trades Calmly with No Major Overnight Developments",
+      "impact": "Evolution AB experienced a quiet news window with no major price actions or new material announcements. The company continues to work through the compliance timeline for Candle Lake Limited's tender offer while preparing for its upcoming extraordinary general meeting on September 22, 2026.",
+      "move_pct": null,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE44IxWqzVn3ER4n0f3SQK3niXEJi4DVahnHWpnp3e76VpBlv29K0DqVeB0LjHJ_HzcR-8OZZldIaE5665WbrRUryAzZa0DNbbrEhOX5csKqWggtv8TvdoXGQ==",
+      "published_at": "2026-09-06"
+    },
+    {
+      "tk": "RHM.DE",
+      "co": "Rheinmetall AG",
+      "flag": "MEDIUM",
+      "headline": "Rheinmetall Anticipates \u20ac12.4 Billion from Germany's Arminius Armored Vehicle Program",
+      "impact": "Rheinmetall CEO Armin Papperger disclosed that the company expects to secure approximately \u20ac12.4 billion in vehicle revenue from the German Bundeswehr's Arminius procurement program by the end of 2026. This contract, which will supply thousands of armored vehicles across several configurations, is handled by the Artec consortium\u2014jointly owned 50/50 by Rheinmetall and KNDS Deutschland\u2014meaning the total initial contract value could approach \u20ac25 billion. Furthermore, Rheinmetall expects to receive \u20ac2 billion from a separate \u20ac4 billion support agreement, and could receive a 30% advance payment exceeding \u20ac3 billion in December 2026 or January 2027 following expected parliamentary funding approval on December 9, 2026.",
+      "move_pct": null,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlEWUYCIAbpNQ6XymQnF0fYcvkPllHuLgUHc4sZbxbEwydpUYNRF2D_d1jD60VEwF56ObnOdVh3u7n9R-Mk3fuZYvwMtCHpzYeCSW7aEeRUC_7FRmEeXWcc0aOXuHKTFhtF30kJRuRkH6rg_pVNLJ1KxQrU5Sc1WPMdBWDW9AMCPssBEq4Quz7Ws6IOb8iqN94SY2m8pSOuUMTeozz_HPWxH1jfaIJBRt2paBL2yasKGDn0dyN-IIy8qW84qIE4wp5T0AEsK-Hd5AEvMzUyBaE7g==",
+      "published_at": "2026-09-06"
+    },
+    {
+      "tk": "BT-A.L",
+      "co": "BT Group",
+      "flag": "QUIET",
+      "headline": "BT Group Remains Quiet Over Weekend Ahead of Upcoming Dividend Payment",
+      "impact": "BT Group saw minimal market activity and no material corporate disclosures over the weekend. Attention remains focused on the company's progress in its fiber network rollout and the upcoming payment of its 5.87p final dividend scheduled for September 9, 2026.",
+      "move_pct": null,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYj4KiSKzos2QhIobtk5GVlmAt66vOPDWkxsU2XZfuqLtECg2vCzJNWEtGD0YOJC0AxAbLEj_fC2T-iUChraRIOzXM7VQMuTLH0M_WNqIP0svY92-LNizQMtLGvzHsIfgp1MmiYOjt34RYy1voHCihkBSSXzMVowZ_-OcL9qIsJT13Vqz23QPx_aE2qMJWeh491z9j18lagXq25PfIst7A9GaaOyZqIRQj9TLN",
+      "published_at": "2026-09-06"
+    },
+    {
+      "tk": "AG1.DE",
+      "co": "Auto1 Group SE",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://ir.auto1-group.com/financial-reports",
+      "published_at": "2026-09-06T00:00:00Z"
+    },
+    {
+      "tk": "CYM.AX",
+      "co": "Cyprium Metals",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://cypriummetals.com/",
+      "published_at": "2026-09-06T00:00:00Z"
+    }
+  ]
+}
