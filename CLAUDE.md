@@ -330,8 +330,20 @@ jobs:
           git config user.name "morning-brief-bot"
           git config user.email "actions@github.com"
           git add tickers.json history/ site/index.html
-          git diff --cached --quiet || git commit -m "Morning brief $(date -u +%F)"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Morning brief $(date -u +%F)"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt/5), rebasing onto origin/main and retrying..."
+            git pull --rebase origin main
+          done
+          echo "Failed to push after 5 attempts." >&2
+          exit 1
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -341,6 +353,12 @@ jobs:
 Both cron lines fire every weekday; the script's Prague-hour gate makes only
 one of them actually produce output, so DST is handled without any manual
 schedule updates twice a year.
+
+The commit step retries on push rejection (with a rebase in between) rather
+than failing outright — a plain `git push` here will race against anything
+else that pushes to `main` (a manual push while a run is in flight, two
+overlapping runs, or the watchlist editor's own commits to `tickers.json`),
+and did fail this way once in practice.
 
 ## Secrets to set in the repo (Settings → Secrets and variables → Actions)
 

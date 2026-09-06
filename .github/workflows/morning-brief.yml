@@ -51,8 +51,21 @@ jobs:
           git config user.name "morning-brief-bot"
           git config user.email "actions@github.com"
           git add tickers.json history/ site/index.html
-          git diff --cached --quiet || git commit -m "Morning brief $(date -u +%F)"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Morning brief $(date -u +%F)"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt/5) — remote moved (e.g. a manual push, or the "
+            echo "watchlist editor committing to tickers.json), rebasing and retrying..."
+            git pull --rebase origin main
+          done
+          echo "Failed to push after 5 attempts." >&2
+          exit 1
 
       - uses: actions/upload-pages-artifact@v3
         with:
