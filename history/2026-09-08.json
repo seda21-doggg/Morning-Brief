@@ -1,0 +1,279 @@
+{
+  "date": "2026-09-08",
+  "prior_trading_day_window": {
+    "start": "2026-09-07T00:00:00+00:00",
+    "end": "2026-09-08T06:00:00+00:00"
+  },
+  "items": [
+    {
+      "tk": "APR.WA",
+      "co": "Auto Partner SA",
+      "flag": "MEDIUM",
+      "headline": "Auto Partner SA Reports 13.3% Increase in Estimated August 2026 Sales Revenue",
+      "impact": "Auto Partner SA reported estimated consolidated sales revenue for August 2026 of PLN 384,171,000, representing a 13.27% increase compared to August 2025's revenue of PLN 339,161,000. For the cumulative period from January to August 2026, the company's estimated revenue rose 11.38% year-over-year to PLN 3,297,236,000. These results showcase continued double-digit sales growth for the auto parts distributor, though the stock reacted mildly, closing up 1.82% at PLN 30.85 on the Warsaw Stock Exchange.",
+      "move_pct": 1.82,
+      "url": "https://www.bankier.pl",
+      "published_at": "2026-09-07T08:48:00Z"
+    },
+    {
+      "tk": "PCO.WA",
+      "co": "Pepco Group",
+      "flag": "QUIET",
+      "headline": "Pepco Group Shares Consolidate in Quiet Trading Session",
+      "impact": "",
+      "move_pct": 0.31,
+      "url": "https://www.gpw.pl",
+      "published_at": "2026-09-07T17:00:00Z"
+    },
+    {
+      "tk": "LPP.WA",
+      "co": "LPP SA",
+      "flag": "MEDIUM",
+      "headline": "LPP SA Reaches Major 4,000-Store Milestone, Driven by Sinsay Brand Expansion",
+      "impact": "Polish apparel giant LPP SA announced it has crossed the milestone of operating 4,000 physical stores across its 47 international markets. During the first half of 2026, the retail group expanded its physical network by opening 351 new stores, with 314 of those belonging to its value-focused Sinsay brand. Sinsay continues to be the primary expansion driver, recently opening its 2,500th location in Tashkent, Uzbekistan, in July 2026 as part of LPP's strategic push into Central Asia.",
+      "move_pct": -0.28,
+      "url": "https://eurobuildcee.com",
+      "published_at": "2026-09-07T12:00:00Z"
+    },
+    {
+      "tk": "GRPN",
+      "co": "Groupon",
+      "flag": "QUIET",
+      "headline": "Groupon Stock Quiet on US Labor Day Holiday",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.nasdaq.com",
+      "published_at": "2026-09-07T20:00:00Z"
+    },
+    {
+      "tk": "NU",
+      "co": "Nu Holdings (Nubank)",
+      "flag": "QUIET",
+      "headline": "Nu Holdings Pauses Trading for Labor Day Holiday",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.nyse.com",
+      "published_at": "2026-09-07T20:00:00Z"
+    },
+    {
+      "tk": "EWG.L",
+      "co": "W.A.G Payment Solutions (Eurowag)",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "VTY.L",
+      "co": "Vistry Group",
+      "flag": "QUIET",
+      "headline": "Vistry Proposes Choice-Led Shared Ownership Model",
+      "impact": "",
+      "move_pct": -4.53,
+      "url": "https://www.vistry.co.uk/media/Press-Releases",
+      "published_at": "2026-09-07T00:00:00+00:00"
+    },
+    {
+      "tk": "PAGS",
+      "co": "PagSeguro Digital",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "SEE.L",
+      "co": "Seeing Machines",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "NVO",
+      "co": "Novo Nordisk",
+      "flag": "HIGH",
+      "headline": "Novo Nordisk Announces Blockbuster Wegovy Pediatric Trial Win and Halts Two Phase 3 Heart Failure Studies",
+      "impact": "Novo Nordisk announced that the Phase 3 STEP Young trial of once-weekly semaglutide (Wegovy) met its primary endpoint in children aged 6 to under 12 years with obesity, showing that 40.4% of treated children dropped below the obesity threshold after 68 weeks. At the same time, the company experienced a significant pipeline setback by halting two major Phase 3 trials\u2014Hermes and Athena, which enrolled 4,900 and 673 patients respectively\u2014testing ziltivekimab in heart failure patients. The decision followed an independent monitoring committee finding a low likelihood of efficacy, further complicating Novo's efforts to diversify its product line beyond diabetes and obesity treatments.",
+      "move_pct": -1.9,
+      "url": "https://www.novonordisk.com/news-and-media/news-and-press-releases.html",
+      "published_at": "2026-09-07T11:44:00+00:00"
+    },
+    {
+      "tk": "ARA.MX",
+      "co": "Consorcio ARA, S.A.B. de C.V.",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "KSPI",
+      "co": "JSC Kaspi.kz",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "VME.DE",
+      "co": "Viromed Medical AG",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "KEOC.ST",
+      "co": "Keo Capital AB",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "GRBK",
+      "co": "Green Brick Partners, Inc.",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "XPF.L",
+      "co": "XP Factory",
+      "flag": "HIGH",
+      "headline": "XP Factory Shares Fall 5.1% After Reporting FY26 Results and Securing \u00a320M HSBC Facility",
+      "impact": "XP Factory plc announced its audited final results for the fiscal year ended March 29, 2026, reporting group revenue up 3% to \u00a359.6 million. However, pre-IFRS 16 Group Adjusted EBITDA fell to \u00a35.5 million from \u00a36.6 million in the prior year as higher labor costs compressed margins, and adjusted operating profit plummeted to \u00a30.8 million from \u00a33.4 million. In positive developments, the company signed a new \u00a320 million revolving credit facility with HSBC to support future capital allocation and growth. Following the announcement, the stock dropped 5.13% to close at GBX 18.50.",
+      "move_pct": -5.13,
+      "url": "https://www.tipranks.com/news/xp-factory-shows-resilient-2026-results-as-escape-hunt-outperforms-and-boom-battles-weak-market",
+      "published_at": "2026-09-07T06:01:00Z"
+    },
+    {
+      "tk": "GOOG",
+      "co": "Alphabet",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "NVDA",
+      "co": "Nvidia",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "NOW",
+      "co": "ServiceNow",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "EVC",
+      "co": "Entravision Communications",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "UBER",
+      "co": "Uber Technologies, Inc.",
+      "flag": "MEDIUM",
+      "headline": "Uber Weighs Debut Euro-Denominated Bond Sale Following Investment-Grade Upgrades",
+      "impact": "Uber has hired several major investment banks to hold calls with investors on September 7 and 8, 2026, to evaluate demand for its first-ever Euro-denominated bond offering. The potential transaction is expected to consist of senior unsecured fixed-rate notes split across five tranches with maturities of 3, 6, 8, 12, and 20 years. Uber appointed Goldman Sachs, BNP Paribas, Bank of America Securities, Deutsche Bank, and Morgan Stanley to act as bookrunners. The strategic financing move follows recent upgrades giving Uber investment-grade status from both S&P (BBB+) and Moody's (Baa2).",
+      "move_pct": null,
+      "url": "https://www.gurufocus.com",
+      "published_at": "2026-09-07T17:00:00+00:00"
+    },
+    {
+      "tk": "BA",
+      "co": "The Boeing Company",
+      "flag": "QUIET",
+      "headline": "Boeing Trades Quietly Over US Labor Day Holiday",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.seekingalpha.com",
+      "published_at": "2026-09-08T05:00:00+00:00"
+    },
+    {
+      "tk": "EVO.ST",
+      "co": "Evolution AB",
+      "flag": "QUIET",
+      "headline": "Evolution AB Releases Weekly Update on Ongoing Share Repurchase Program",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.tipranks.com",
+      "published_at": "2026-09-07T08:30:00+00:00"
+    },
+    {
+      "tk": "RHM.DE",
+      "co": "Rheinmetall AG",
+      "flag": "MEDIUM",
+      "headline": "American Rheinmetall Delivers First Lynx XM30 Combat Vehicle Prototype to U.S. Army",
+      "impact": "American Rheinmetall delivered the first of eight Lynx XM30 combat vehicle prototypes to the U.S. Army on September 7, 2026, initiating physical developmental and performance testing. The delivery is part of a $764 million Engineering and Manufacturing Development contract to construct a digital-and-physical modular replacement for the aging M2 Bradley Fighting Vehicle. The overall vehicle replacement program is estimated to be worth up to $45 billion, with the prototype featuring a first-of-its-kind hybrid-electric powertrain.",
+      "move_pct": null,
+      "url": "https://www.washingtontimes.com",
+      "published_at": "2026-09-07T12:00:00+00:00"
+    },
+    {
+      "tk": "BT-A.L",
+      "co": "BT Group plc",
+      "flag": "MEDIUM",
+      "headline": "Goldman Sachs Bullish on European Telecoms, Naming BT Group as Top Buy Idea",
+      "impact": "In a September 7, 2026, research note on European digital infrastructure, Goldman Sachs named BT Group as its top high-risk, high-reward 'Buy' recommendation. The bank issued a 12-month price target of 330p, implying an outsized 62% equity upside from current trading levels. Goldman's positive thesis is driven by expected fiber monetization at BT's wholesale broadband unit Openreach, with the broker's free cash flow estimates running roughly 20% ahead of consensus for the 2027 fiscal year.",
+      "move_pct": -1.24,
+      "url": "https://www.investing.com",
+      "published_at": "2026-09-07T08:13:00+00:00"
+    },
+    {
+      "tk": "AG1.DE",
+      "co": "Auto1 Group SE",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "CYM.AX",
+      "co": "Cyprium Metals",
+      "flag": "QUIET",
+      "headline": "No material overnight news",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    }
+  ]
+}
