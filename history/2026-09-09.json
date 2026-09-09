@@ -1,0 +1,279 @@
+{
+  "date": "2026-09-09",
+  "prior_trading_day_window": {
+    "start": "2026-09-08T00:00:00+00:00",
+    "end": "2026-09-09T06:00:00+00:00"
+  },
+  "items": [
+    {
+      "tk": "APR.WA",
+      "co": "Auto Partner SA",
+      "flag": "QUIET",
+      "headline": "Auto Partner SA Trades Quietly Following August Sales Estimates Release",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://ir.autopartner.com/",
+      "published_at": "2026-09-08T17:00:00Z"
+    },
+    {
+      "tk": "PCO.WA",
+      "co": "Pepco Group N.V.",
+      "flag": "QUIET",
+      "headline": "Pepco Group Shares Hold Steady with No Major New Catalysts",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.pepcogroup.eu/investors/",
+      "published_at": "2026-09-08T17:00:00Z"
+    },
+    {
+      "tk": "LPP.WA",
+      "co": "LPP SA",
+      "flag": "QUIET",
+      "headline": "LPP SA Relocates Warsaw Office and Showroom to Saski Crescent Building",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://nowawarszawa.pl/lpp-otworzylo-nowe-biuro-i-showroom-w-saski-crescent/",
+      "published_at": "2026-09-08T14:00:00Z"
+    },
+    {
+      "tk": "GRPN",
+      "co": "Groupon, Inc.",
+      "flag": "QUIET",
+      "headline": "Groupon Shares Trade in a Narrow Range Ahead of Scheduled Investor Events",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://investor.groupon.com/",
+      "published_at": "2026-09-08T20:00:00Z"
+    },
+    {
+      "tk": "NU",
+      "co": "Nu Holdings Ltd.",
+      "flag": "QUIET",
+      "headline": "Nu Holdings Consolidates as Analysts Review AI Underwriting and Crypto Regulatory Frameworks",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://investors.nu/",
+      "published_at": "2026-09-08T15:00:00Z"
+    },
+    {
+      "tk": "EWG.L",
+      "co": "Eurowag (W.A.G Payment Solutions)",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://investors.eurowag.com/",
+      "published_at": "2026-09-09T05:00:00+00:00"
+    },
+    {
+      "tk": "VTY.L",
+      "co": "Vistry Group",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.vistry.co.uk/",
+      "published_at": "2026-09-08T12:00:00+00:00"
+    },
+    {
+      "tk": "PAGS",
+      "co": "PagSeguro Digital",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://simplywall.st/",
+      "published_at": "2026-09-08T14:00:00+00:00"
+    },
+    {
+      "tk": "SEE.L",
+      "co": "Seeing Machines",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://kalkinemedia.com/",
+      "published_at": "2026-09-08T13:00:00+00:00"
+    },
+    {
+      "tk": "NVO",
+      "co": "Novo Nordisk",
+      "flag": "QUIET",
+      "headline": "No Material News",
+      "impact": "",
+      "move_pct": null,
+      "url": "https://www.novonordisk.com/",
+      "published_at": "2026-09-08T11:55:00+00:00"
+    },
+    {
+      "tk": "ARA.MX",
+      "co": "Consorcio ARA, S.A.B. de C.V.",
+      "flag": "HIGH",
+      "headline": "Consorcio ARA Shares Fall 5.69% to Lead Decliners on Mexican Stock Exchange",
+      "impact": "Consorcio ARA, S.A.B. de C.V. recorded the largest decline on the Mexican Stock Exchange (BMV) on September 8, 2026, falling 5.69% to close lower at 4.92 pesos per share. The sharp downward move was driven by wider real estate, infrastructure, and airport sector pressure rather than company-specific announcements. This decline occurred despite the overall IPC benchmark index finishing the session up 0.52% and follows HR Ratings' recent ratification of the company's credit rating at 'HR AA' with a stable outlook.",
+      "move_pct": -5.69,
+      "url": "https://www.swissinfo.ch/es/la-bolsa-mexicana-gana-un-0-52-tras-dos-sesiones-a-la-baja-y-sube-a-65-065-56-unidades",
+      "published_at": "2026-09-08T22:16:00Z"
+    },
+    {
+      "tk": "KSPI",
+      "co": "Joint Stock Company Kaspi.kz",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "VME.DE",
+      "co": "Viromed Medical AG",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "KEOC.ST",
+      "co": "Keo Capital AB",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "GRBK",
+      "co": "Green Brick Partners, Inc.",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "XPF.L",
+      "co": "XP Factory",
+      "flag": "QUIET",
+      "headline": "XP Factory Stock Trades Flat Following Earlier Earnings Release",
+      "impact": "",
+      "move_pct": 0.0,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_nxdSuyZNXvJz8hEDWc6Drj-9-k1cP1Lud3DTcyalPAMZpqWMPirplZzLLY2Chv0b1OnMf8dcuwrXHtMCFwtevZOJYK5iUGDSsQV2AigOH0f4cvvkfVMc0lXXjgOk2NMEUww0y7me4wZ8T6a0V2N5AoHTnqGRBlYfQQ==",
+      "published_at": "2026-09-08T08:00:00+00:00"
+    },
+    {
+      "tk": "GOOG",
+      "co": "Alphabet",
+      "flag": "MEDIUM",
+      "headline": "Alphabet-Blackstone $5B AI Cloud Joint Venture Project Braid Faces Data Center Delays",
+      "impact": "Alphabet and Blackstone's $5 billion joint venture, Project Braid, designed to lease Google's AI TPUs to enterprise customers starting in 2027, has encountered notable delays across multiple planned data center sites. Google terminated a build near Cheyenne, Wyoming after losing confidence in developer Crusoe's execution capability and is now downsizing and reapplying for permits under its own command. Additional sites fell through due to a severe nationwide shortage of power transformers carrying lead times of almost a year, alongside a freeze on new data center approvals in Texas. Despite the hurdles, the venture's CEO, Benjamin Treynor Sloss, stated that Project Braid remains on track to deliver its target of 500 megawatts next year.",
+      "move_pct": 0.09,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHamfG10kcGfQDl1ISJ9EtVN4H2kcz28JkZd-T1eIT3RiLW8kvl-3BWWOHF5_8rC27e45stPqLv7Rijn9JmnoM8RdhllSj61HNXcCtz41AbIplhoCmcuy4ui87LAILkI6OIe2KP2C5Rg_RlC-j1ZmYZtehAcO-pRezGg-J-Wsd7BfmyCIOVa7AFdbd7J7RaXgXbq3LiYeOgZKsziR-E_qme8PhtIGBTYg==",
+      "published_at": "2026-09-08T15:21:00+00:00"
+    },
+    {
+      "tk": "NVDA",
+      "co": "Nvidia",
+      "flag": "MEDIUM",
+      "headline": "Nvidia Hugging Face Open-Platform Commitments Outlined as Vera Rubin Benchmarks Excel",
+      "impact": "Nvidia clarified its post-acquisition plans for Hugging Face, confirming that the platform will remain neutral and open-source models will not require Nvidia compute after its $12.93 billion transaction closes. Simultaneously, testing data from the SemiAnalysis AgentX benchmark showed Nvidia's next-generation Vera Rubin NVL72 achieves up to 30 times higher AI-factory throughput per megawatt than the GB300 NVL72. Additionally, an SEC Form 4 filed on September 8 disclosed that Nvidia Director Mark Stevens sold 1,022,239 shares of common stock between September 3 and 4, generating approximately $234 million.",
+      "move_pct": -2.01,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoP2Dky6CxcKgRDjRB8zdpTRWauS1QNC2_YkTqTc5UOX87DagLkRjv0O4A4UdaV7Is4tByn84jpt0FRwBK_nXsolNPT3cu2URYwJZW8gMlskuNWApum0-LzFakbkSkgojUoGrnAogFg7NBQMY6-qLTa4jW4hop270quidsVwIKDNkrWco=",
+      "published_at": "2026-09-08T17:30:00+00:00"
+    },
+    {
+      "tk": "NOW",
+      "co": "ServiceNow",
+      "flag": "HIGH",
+      "headline": "ServiceNow Plunges 5% as OpenAI's GPT-6 Astra Launch Ignites AI Agent Cannibalization Fears",
+      "impact": "ServiceNow shares slid exactly 5.0% to close at $134.21 after OpenAI released its highly anticipated GPT-6 Astra AI model. GPT-6 Astra scored 72.6% on the OSWorld 2.0 computer-use benchmark, demonstrating a major leap in its ability to directly interact with and operate desktop applications. The launch triggered a sharp, industry-wide selloff in software stocks, as investors grow increasingly concerned that next-generation autonomous AI agents will bypass existing enterprise platforms and cannibalize workflows traditional players like ServiceNow manage.",
+      "move_pct": -5.0,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFSh1IwptlQnMjumgdHbNvSF1Jw88gaA7r3Gv9YeuqiwS9U7v_G914812ceyE0XvQCkTmAohOD-bbGbsUmuj07eCrfEO_BBaKdAxrcunJH-PkQYtOZxWhIGHGAzD1Av3bFcE-AX4zvuNcK8ocQPwtKUsMP_01A8ANzjr6Giib6DSgSCdm46KTW1vRhAA==",
+      "published_at": "2026-09-09T03:39:00+00:00"
+    },
+    {
+      "tk": "EVC",
+      "co": "Entravision Communications",
+      "flag": "MEDIUM",
+      "headline": "Entravision Launches National Streaming Platform AHORA Amid Insider Disclosures",
+      "impact": "Entravision Communications debuted 'Entravision AHORA,' a new national Spanish-language news streaming platform integrating live programming and local news from key U.S. markets. The streaming service features regional reporting from major Hispanic hubs including Miami, Orlando, Las Vegas, San Diego, Denver, McAllen, and El Paso. The launch coincided with a separate regulatory disclosure showing Director Paul A. Zevnik sold 35,000 shares of Class A common stock on September 4, generating total proceeds of $293,964.",
+      "move_pct": -1.72,
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpxxBYAZqCafrLLIvCe6SIYFf8KCcky0KrPBIsmirnyA7sH3Q4ot-4uK_KQC1UDATOsrvBPNWjymm-TrmwvGM2jnt5kbXFLSRRm6m4xzIm2L4HZKN_XNyr6pmIruqj5_JtwZbq82MUYFaPQCo=",
+      "published_at": "2026-09-08T15:39:00+00:00"
+    },
+    {
+      "tk": "UBER",
+      "co": "Uber Technologies, Inc.",
+      "flag": "MEDIUM",
+      "headline": "Uber COO Buys $5.3M in Stock as Wedbush Reaffirms Outperform Rating",
+      "impact": "An SEC Form 4 filing on September 8, 2026, revealed that Uber's President and COO Andrew Macdonald purchased 70,000 shares of common stock in the open market on September 4 at weighted averages between $75.65 and $76.44, totaling approximately $5.3 million. Concurrently, Wedbush reiterated its 'Outperform' rating on Uber with a $91.00 price target. Wedbush analysts highlighted that Uber is exceptionally well-positioned to profit from autonomous vehicle network distribution, pointing out that its AV-facilitated trips have surged tenfold year-over-year.",
+      "move_pct": -3.6,
+      "url": "https://www.stocktitan.net/news/UBER/",
+      "published_at": "2026-09-08T15:00:00Z"
+    },
+    {
+      "tk": "BA",
+      "co": "The Boeing Company",
+      "flag": "MEDIUM",
+      "headline": "Boeing Delivers 51 Commercial Jets in August, Marking Highest Year-to-Date Volume Since 2018",
+      "impact": "On September 8, 2026, Boeing announced it delivered 51 commercial planes in August, including 41 737 MAXs, four 787 Dreamliners, three 767s, and two 777 Freighters. The aircraft manufacturer also booked 15 gross orders (13 for 787s and two for 737 MAXs) with zero cancellations during the month. This brings Boeing's year-to-date deliveries to 418 planes through August, representing the company's highest January\u2013August delivery total since 2018.",
+      "move_pct": 0.43,
+      "url": "https://www.morningstar.com/",
+      "published_at": "2026-09-08T15:14:00Z"
+    },
+    {
+      "tk": "EVO.ST",
+      "co": "Evolution AB",
+      "flag": "HIGH",
+      "headline": "Leaked Internal Report Confirms Evolution AB Earned Revenue in Banned Gambling Markets",
+      "impact": "On September 8, 2026, the Financial Times reported that a secret, company-commissioned report from late 2021 by the consultancy Spectrum Gaming Group was leaked in an ongoing New Jersey Superior Court battle between Evolution and private intelligence firm Black Cube. The leaked document 'specifically corroborated' Black Cube's accusations that Evolution's online casino games were played in prohibited locations such as Hong Kong, Singapore, the United Arab Emirates, and Saudi Arabia, attributing the activity to internal 'compliance deficiencies' that the group had fought to keep hidden.",
+      "move_pct": -0.5,
+      "url": "https://www.ft.com/content/ef1a17cb-80ac-40b2-b9a2-2e433b287e87",
+      "published_at": "2026-09-08T17:36:00Z"
+    },
+    {
+      "tk": "RHM.DE",
+      "co": "Rheinmetall AG",
+      "flag": "QUIET",
+      "headline": "Rheinmetall MAN Military Vehicles Partners with MAN Truck & Bus and Poland's WB Group",
+      "impact": "",
+      "move_pct": 0.69,
+      "url": "https://ir.rheinmetall.com/",
+      "published_at": "2026-09-08T13:15:00Z"
+    },
+    {
+      "tk": "BT-A.L",
+      "co": "BT Group plc",
+      "flag": "QUIET",
+      "headline": "BT Group plc Distributes Scheduled Final Dividend of 5.87p Per Share",
+      "impact": "",
+      "move_pct": -0.63,
+      "url": "https://www.bt.com/about/investors",
+      "published_at": "2026-09-09T00:00:00Z"
+    },
+    {
+      "tk": "AG1.DE",
+      "co": "Auto1 Group SE",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    },
+    {
+      "tk": "CYM.AX",
+      "co": "Cyprium Metals",
+      "flag": "QUIET",
+      "headline": "",
+      "impact": "",
+      "move_pct": null,
+      "url": "",
+      "published_at": ""
+    }
+  ]
+}
